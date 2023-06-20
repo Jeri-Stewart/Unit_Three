@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "hibernate://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd>
+<hibernate-configuration>
+        <session-factory>
+            <!-- JOBC Database connection settings -->
+            <property name="connection.driver_class">org.postgresql.Driver</property>
+            <property name="connection.url">jdbc:postgresql://db.nqntvwoqxevwnzyfiief.supabase.co:5432/unitTwoDB</property>
+            <property name="connection.username">jstew</property>
+            <property name="connection.password">xCfaXyrZIzteHxR2</property>
+            <!-- JOBC connenction pool settigns ... using built-in test pool -->
+            <property name="connection.pool_size">1</property>
+            <!-- Select Our SQL dialect -->
+            <property name="dialect">org.hibernate,dialect.PostgresSQL9Dialect</property>
+            <!-- Echo the sQL stdout -->
+            <property name="show_sql">true</property>
+            <!-- Set the current session context -->
+            <property name="current_session_context_class">thread</property>
+            <!-- Drop adn re-create the database schema on startup -->
+            <property name="hbm2ddl.auto">update</property>
+        </session-factory>
+        </hibernate-configuration>
